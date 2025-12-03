@@ -45,7 +45,7 @@ ifeq ($(BACKEND),nodejs)
 	cd $(API_DIR) && npm install
 	cd $(FRONTEND_DIR) && npm install
 else ifeq ($(BACKEND),python)
-	cd $(API_DIR) && pip install -e ".[dev]"
+	cd $(API_DIR) && $(MAKE) venv
 	cd $(FRONTEND_DIR) && npm install
 else
 	@echo "Error: Unknown backend '$(BACKEND)'"

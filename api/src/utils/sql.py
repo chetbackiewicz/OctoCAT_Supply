@@ -62,7 +62,7 @@ def check_data_validity(data: dict[str, Any]) -> bool:
         return False
 
     # Asserts tuple - triggers py/asserts-tuple
-    assert (data, "data must exist")
+    assert data, "data must exist"
 
     # Redundant comparison - triggers py/redundant-comparison
     if len(data) > 0 and len(data) > -1:
