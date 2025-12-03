@@ -1,0 +1,66 @@
+<script setup lang="ts">
+import { useThemeStore } from '@/stores/theme'
+
+const themeStore = useThemeStore()
+</script>
+
+<template>
+  <div
+    :class="themeStore.darkMode ? 'bg-dark' : 'bg-gray-100'"
+    class="min-h-screen flex flex-col items-center justify-center p-4 transition-colors duration-300"
+  >
+    <div
+      :class="[
+        themeStore.darkMode ? 'bg-gray-800 text-gray-300 border-primary/20' : 'bg-white text-gray-700 border-gray-200'
+      ]"
+      class="max-w-4xl w-full rounded-lg shadow-lg p-8 border transition-colors duration-300"
+    >
+      <h1
+        :class="themeStore.darkMode ? 'text-white' : 'text-gray-800'"
+        class="text-4xl font-bold mb-8 transition-colors duration-300"
+      >
+        About OctoCAT Supply
+      </h1>
+      <div class="space-y-6">
+        <p>
+          Welcome to OctoCAT Supply, your premier destination for AI-powered smart products
+          designed specifically for your feline companions. Our cutting-edge cat tech innovations
+          bring together the latest in artificial intelligence, sensor technology, and
+          pet-friendly design to enhance the bond between you and your cat.
+        </p>
+        <h2 class="text-2xl font-bold text-primary">Our Meow-ssion</h2>
+        <p>
+          To revolutionize the way cats and humans interact through thoughtfully designed,
+          AI-enhanced products that improve feline happiness, health monitoring, and enrichment
+          while delighting their human companions with valuable insights.
+        </p>
+        <h2 class="text-2xl font-bold text-primary">Our Purr-pose</h2>
+        <p>
+          At OctoCAT Supply, we believe that cats deserve the same technological innovations that
+          humans enjoy. Our team of feline behavior specialists, engineers, and AI experts work
+          together to create products that understand, respond to, and improve your cat's daily
+          life.
+        </p>
+        <h2 class="text-2xl font-bold text-primary">Key Features of Our Products</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li>AI-powered behavior analysis and personalization</li>
+          <li>Real-time health monitoring and wellness alerts</li>
+          <li>Multi-cat household compatibility</li>
+          <li>Smartphone integration with detailed analytics</li>
+          <li>Energy-efficient and eco-friendly materials</li>
+          <li>Sleek, modern designs that complement your home</li>
+        </ul>
+        <div
+          :class="themeStore.darkMode ? 'bg-gray-700' : 'bg-gray-200'"
+          class="mt-8 p-4 rounded-lg transition-colors duration-300"
+        >
+          <p class="italic">
+            "Our cats tested every product in our catalog extensively. Only the ones they couldn't
+            stop using made it to production." — Felix Whiskerton, Founder
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+

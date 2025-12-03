@@ -1,0 +1,26 @@
+{
+  "inputs": [
+  ],
+  "servers": { 
+    "github-remote": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "X-MCP-Toolsets": "actions, code_security, dependabot, discussions, issues, orgs, projects, pull_requests, repos, secret_protection, security_advisories, copilot, copilot_spaces"
+      }
+    },
+    "arm-mcp": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "-v",
+        "${workspaceFolder}:/workspace",
+        "--name",
+        "arm-mcp",
+        "armswdev/arm-mcp:latest"
+      ]
+    }
+  },
+}
