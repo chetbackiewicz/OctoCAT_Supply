@@ -134,6 +134,7 @@ Database defaults and env vars:
 | **Coding Review Agent**          | When a Pull Request is ready for review, especially when a branch ruleset requires a review based on the **entire codebase** for maximum context.   | **Automates and enhances code review** by applying the context of the _entire codebase_ and relevant enterprise instructions to find complex issues. |
 | **Copilot Immersive Experience - Chat**   | To quickly ask questions or summarize complex information (like Code Review findings) directly from a GitHub Pull Request with the relevant context already loaded. | Enables **fast, context-aware information retrieval and synthesis** directly related to the current development artifact (the PR).          |
 | **Copilot Immersive Experience - Spaces** | To create a **persistent, curated context window** by adding files, directories, issues, and text from across GitHub and referencing it in both chat and the IDE.   | Acts as a **memory layer** for Copilot, ensuring complex, spread-out context is always available for Agents and Chat, maximizing relevance. |
+| **Copilot CLI** |	When you want to use natural language for complex Shell or delegation tasks. |	Brings the agent's intelligence to your terminal for command execution and asynchronous task launch. |
 
 
 *Built with Vue.js, FastAPI, and GitHub Copilot* 🤖✨
